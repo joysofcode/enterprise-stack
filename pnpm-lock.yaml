@@ -10,6 +10,7 @@ specifiers:
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
+  open-props: ^1.5.5
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
   svelte: ^3.54.0
@@ -21,6 +22,7 @@ specifiers:
 
 dependencies:
   '@prisma/client': 4.11.0
+  open-props: 1.5.5
 
 devDependencies:
   '@playwright/test': 1.31.2
@@ -1371,6 +1373,10 @@ packages:
     dependencies:
       wrappy: 1.0.2
     dev: true
+
+  /open-props/1.5.5:
+    resolution: {integrity: sha512-MiNn+fZFcdEn8OcgHMqcCa3m41XiIL5yiPW/j4+ozPrk7SGEvlQsr5J2qE2Jp/sHSOpuVapcCBCFx11fE5pZUA==}
+    dev: false
 
   /optionator/0.9.1:
     resolution: {integrity: sha512-74RlY5FCnhq4jRxVUPKDaRwrVNXMqsGsiW6AJw4XK8hmtm10wC0ypZBLw5IIp85NZMr91+qd1RvvENwg7jjRFw==}

@@ -33,6 +33,7 @@
 		"vitest": "^0.25.3"
 	},
 	"dependencies": {
-		"@prisma/client": "^4.11.0"
+		"@prisma/client": "^4.11.0",
+		"open-props": "^1.5.5"
 	}
 }
