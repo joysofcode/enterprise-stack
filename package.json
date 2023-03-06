@@ -1,6 +1,6 @@
 {
 	"type": "module",
-	"name": "sk-auth-stack",
+	"name": "enterprise-stack",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
