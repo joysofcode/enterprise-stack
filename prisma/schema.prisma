@@ -14,8 +14,10 @@ model User {
   id      String    @id @unique
   session Session[]
   Key     Key[]
+
   // here you can add custom fields for your user
   // e.g. name, email, username, roles, etc.
+  username String @unique
 
   @@map("user")
 }

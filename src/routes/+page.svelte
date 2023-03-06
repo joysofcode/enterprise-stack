@@ -1,4 +1,17 @@
-<h1>Welcome to SvelteKit</h1>
-<p>
-	Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-</p>
+<script lang="ts">
+	import { enhance } from '$app/forms'
+	import { getUser } from '@lucia-auth/sveltekit/client'
+
+	const user = getUser()
+</script>
+
+<h1>Profile</h1>
+
+<div>
+	<p>User id: {$user?.userId}</p>
+	<p>Username: {$user?.username}</p>
+</div>
+
+<form method="POST" use:enhance>
+	<button type="submit">Sign out</button>
+</form>
