@@ -33,7 +33,10 @@
 		"vitest": "^0.25.3"
 	},
 	"dependencies": {
+		"@lucia-auth/adapter-prisma": "^0.5.3",
+		"@lucia-auth/sveltekit": "^0.6.9",
 		"@prisma/client": "^4.11.0",
+		"lucia-auth": "^0.8.0",
 		"open-props": "^1.5.5"
 	}
 }

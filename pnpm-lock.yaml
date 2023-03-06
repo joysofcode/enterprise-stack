@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@lucia-auth/adapter-prisma': ^0.5.3
+  '@lucia-auth/sveltekit': ^0.6.9
   '@playwright/test': ^1.28.1
   '@prisma/client': ^4.11.0
   '@sveltejs/adapter-auto': ^2.0.0
@@ -10,6 +12,7 @@ specifiers:
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
+  lucia-auth: ^0.8.0
   open-props: ^1.5.5
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
@@ -21,7 +24,10 @@ specifiers:
   vitest: ^0.25.3
 
 dependencies:
+  '@lucia-auth/adapter-prisma': 0.5.3_lucia-auth@0.8.0
+  '@lucia-auth/sveltekit': 0.6.9_jbzxvsa4dqpgldlqvh4ov3dsay
   '@prisma/client': 4.11.0
+  lucia-auth: 0.8.0
   open-props: 1.5.5
 
 devDependencies:
@@ -299,6 +305,29 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
+
+  /@lucia-auth/adapter-prisma/0.5.3_lucia-auth@0.8.0:
+    resolution: {integrity: sha512-iR/NE/2pyIXXAcJ6AK0bZz4pbxoIsCqPc+QguhdyqF7b7RHmUodfQO87S0HVGHsvQsNDJkFO45IuqXTuM7Pnpg==}
+    peerDependencies:
+      lucia-auth: 0.7.x - 0.8.x
+    dependencies:
+      lucia-auth: 0.8.0
+    dev: false
+
+  /@lucia-auth/sveltekit/0.6.9_jbzxvsa4dqpgldlqvh4ov3dsay:
+    resolution: {integrity: sha512-gc0AS0anZI25tz+tKNLIcPccBU3UWwhGhpv8ITcx983Xx9A9ipg04IQDadmYZWrsU74KSfEb3nsCP59tJDLYDg==}
+    peerDependencies:
+      lucia-auth: 0.5.x - 0.8.x
+      svelte: 3.x
+    dependencies:
+      '@noble/hashes': 1.2.0
+      lucia-auth: 0.8.0
+      svelte: 3.55.1
+    dev: false
+
+  /@noble/hashes/1.2.0:
+    resolution: {integrity: sha512-FZfhjEDbT5GRswV3C6uvLPHMiVD6lQBmpoX5+eSiPaMTXte/IKqI5dykDxzZB/WBeK/CDuQRBWarPdi3FNY2zQ==}
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1273,6 +1302,13 @@ packages:
       yallist: 4.0.0
     dev: true
 
+  /lucia-auth/0.8.0:
+    resolution: {integrity: sha512-YWjPntkyzGJzqNkI8EbTj3Dhs9IU1yHI7ET6K9CyCOCYAhZ6vfq0ujRPW8gVgBMqovEToO7TXM3I9p3ad1deow==}
+    dependencies:
+      '@noble/hashes': 1.2.0
+      nanoid: 4.0.1
+    dev: false
+
   /magic-string/0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -1354,6 +1390,12 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
+
+  /nanoid/4.0.1:
+    resolution: {integrity: sha512-udKGtCCUafD3nQtJg9wBhRP3KMbPglUsgV5JVsXhvyBs/oefqb4sqMEhKBBgqZncYowu58p1prsZQBYvAj/Gww==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: false
 
   /natural-compare-lite/1.4.0:
     resolution: {integrity: sha512-Tj+HTDSJJKaZnfiuw+iaF9skdPpTo2GtEly5JHnWV/hfv2Qj/9RKsGISQtLh2ox3l5EAGw487hnBee0sIJ6v2g==}
@@ -1765,7 +1807,6 @@ packages:
   /svelte/3.55.1:
     resolution: {integrity: sha512-S+87/P0Ve67HxKkEV23iCdAh/SX1xiSfjF1HOglno/YTbSTW7RniICMCofWGdJJbdjw3S+0PfFb1JtGfTXE0oQ==}
     engines: {node: '>= 8'}
-    dev: true
 
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
