@@ -16,17 +16,24 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
+		"@skeletonlabs/skeleton": "^0.132.5",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
+		"@tailwindcss/forms": "^0.5.3",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"autoprefixer": "^10.4.7",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"postcss": "^8.4.14",
+		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte": "^3.54.0",
 		"svelte-check": "^3.0.1",
+		"svelte-preprocess": "^4.10.7",
+		"tailwindcss": "^3.1.5",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0",
@@ -36,7 +43,6 @@
 		"@lucia-auth/adapter-prisma": "^0.5.3",
 		"@lucia-auth/sveltekit": "^0.6.9",
 		"@prisma/client": "^4.11.0",
-		"lucia-auth": "^0.8.0",
-		"open-props": "^1.5.5"
+		"lucia-auth": "^0.8.0"
 	}
 }
