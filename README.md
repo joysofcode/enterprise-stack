@@ -1,16 +1,75 @@
 # The SvelteKit Stack For Enterprise
 
-![Ha Ha! Business meme](https://haha.business/business.jpg)
+Time is money and setting up a project can be a lot when you could be focusing on the business logic — now you can using this powerful SvelteKit enterprise grade template.
 
-## Time Is Money Fool
+Tap into your true potential and you're going to be laughing "Ha Ha! Business" out loud in no time to the bank.
 
-Time is money and setting up a project can be a lot when you should instead be focusing on the business logic — now you can using this powerful SvelteKit enterprise grade template. Tap into your true potential and you're going to be laughing and shouting "Ha Ha! Business" to the bank in no time.
+![SvelteKit Enterprise Stack](https://user-images.githubusercontent.com/38083522/223439340-ae4af96b-e848-47fc-be73-3a4b8cb834e1.png)
 
-## Features
+## Stack
 
-Every part of the SvelteKit stack for enterprise is optimized to go blazingly fast and please the investors.
+Every part of the SvelteKit stack for enterprise is optimized to go blazingly fast to please investors and shareholders alike using:
 
-- Database using [Prisma](https://www.prisma.io/)
-- Authentication using [Lucia](https://lucia-auth.com/)
-- Styling using [Tailwind](https://tailwindcss.com/)
-- UI components using [Skeleton](https://www.skeleton.dev/)
+- [Prisma](https://www.prisma.io/) for the database
+- [Lucia](https://lucia-auth.com/) for authentication
+- [Tailwind](https://tailwindcss.com/) for styling
+- [Skeleton UI](https://www.skeleton.dev/) for the UI components
+- Automatic class sorting for Tailwind
+
+You can change how everything works from your database to authentication **if you read their documentation.** — for example by default Prisma uses [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to change it to use any other SQL database if you want.
+
+## Using The Template
+
+You can start a new project by pressing "Use this template" inside GitHub which copies the project over with a clean Git history.
+
+![Template](https://user-images.githubusercontent.com/38083522/223441491-4d3dda0b-ee0e-49cd-ab0d-ce9fd74dd124.png)
+
+## Using Degit
+
+You can use `degit` to download the project if you don't want to create a new repository, or if you're not using GitHub which also gives you a clean slate to start from.
+
+```
+npx degit joysofcode/enterprise-stack
+```
+
+## Setup
+
+Install the dependencies.
+
+```bash
+npm i
+```
+
+Set your environment variables inside `.env` (rename `.env.example` to `.env`).
+
+```shell
+DATABASE_URL="file:./dev.db"
+```
+
+You can change the database schema inside `prisma/schema.prisma` and then create the `prisma/dev.db` database from your schema.
+
+```bash
+npx prisma db push
+```
+
+You can run `npx prisma studio` to look at your database.
+
+Run the development server.
+
+```bash
+npm run dev
+```
+
+## Deploying
+
+You can pick a SvelteKit adapter you want and deploy this to anywhere. If you don't have a full-stack hosting solution you can use a serverless SQL database provider and host your frontend somewhere else.
+
+```bash
+npm run build
+```
+
+You can also preview the build.
+
+```bash
+npm run preview
+```
