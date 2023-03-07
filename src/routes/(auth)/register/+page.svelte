@@ -2,20 +2,20 @@
 	import { enhance } from '$app/forms'
 </script>
 
-<div>
-	<h1>Create an account</h1>
+<div class="m-auto mt-16 max-w-sm">
+	<h1>Register</h1>
 
-	<form method="POST" use:enhance>
-		<label for="username">
-			Username
-			<input id="username" name="username" />
+	<form class="mt-8 space-y-4" method="POST" use:enhance>
+		<label class="label" for="username">
+			<span>Username</span>
+			<input class="input" type="text" id="username" name="username" />
 		</label>
 
-		<label for="password">
-			Password
-			<input type="password" id="password" name="password" />
+		<label class="label" for="password">
+			<span>Password</span>
+			<input class="input" type="password" id="password" name="password" />
 		</label>
 
-		<button type="submit">Register</button>
+		<button class="btn variant-filled mt-4" type="submit">Register</button>
 	</form>
 </div>
