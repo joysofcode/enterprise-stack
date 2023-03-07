@@ -18,8 +18,9 @@ specifiers:
   lucia-auth: ^0.8.0
   postcss: ^8.4.14
   postcss-load-config: ^4.0.1
-  prettier: ^2.8.0
+  prettier: ^2.8.4
   prettier-plugin-svelte: ^2.8.1
+  prettier-plugin-tailwindcss: ^0.2.4
   svelte: ^3.54.0
   svelte-check: ^3.0.1
   svelte-preprocess: ^4.10.7
@@ -51,6 +52,7 @@ devDependencies:
   postcss-load-config: 4.0.1_postcss@8.4.21
   prettier: 2.8.4
   prettier-plugin-svelte: 2.9.0_jrsxveqmsx2uadbqiuq74wlc4u
+  prettier-plugin-tailwindcss: 0.2.4_yjdjpc7im5hvpskij45owfsns4
   svelte: 3.55.1
   svelte-check: 3.0.4_gqx7lw3sljhsd4bstor5m2aa2u
   svelte-preprocess: 4.10.7_b25a55hc532q56kmuqlrolam2i
@@ -1754,6 +1756,62 @@ packages:
     dependencies:
       prettier: 2.8.4
       svelte: 3.55.1
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.2.4_yjdjpc7im5hvpskij45owfsns4:
+    resolution: {integrity: sha512-wMyugRI2yD8gqmMpZSS8kTA0gGeKozX/R+w8iWE+yiCZL09zY0SvfiHfHabNhjGhzxlQ2S2VuTxPE3T72vppCQ==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-php': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@shufo/prettier-plugin-blade': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
+      prettier: '>=2.2.0'
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-import-sort: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-style-order: '*'
+      prettier-plugin-svelte: '*'
+      prettier-plugin-twig-melody: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-php':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@shufo/prettier-plugin-blade':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      prettier-plugin-twig-melody:
+        optional: true
+    dependencies:
+      prettier: 2.8.4
+      prettier-plugin-svelte: 2.9.0_jrsxveqmsx2uadbqiuq74wlc4u
     dev: true
 
   /prettier/2.8.4:
