@@ -16,7 +16,7 @@ Every part of the SvelteKit stack for enterprise is optimized to go blazingly fa
 - [Skeleton UI](https://www.skeleton.dev/) for the UI components
 - Automatic class sorting for Tailwind
 
-You can change how everything works from your database to authentication **if you read their documentation.** — for example by default Prisma uses [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to change it to use any other SQL database if you want.
+You can change how everything works from your database to authentication **if you read their documentation** — for example by default Prisma uses [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to change it to use any other SQL database if you want.
 
 ## Using The Template
 
@@ -34,27 +34,29 @@ npx degit joysofcode/enterprise-stack
 
 ## Setup
 
-Install the dependencies.
+📦️ Install the project dependencies.
 
 ```bash
 npm i
 ```
 
-Set your environment variables inside `.env` (rename `.env.example` to `.env`).
+⚙️ Rename `.env.example` to `.env` and set your environment variables inside.
 
 ```shell
 DATABASE_URL="file:./dev.db"
 ```
 
-You can change the database schema inside `prisma/schema.prisma` and then create the `prisma/dev.db` database from your schema.
+📜 Create the database and generate the Prisma client from your Prisma schema.
 
 ```bash
 npx prisma db push
 ```
 
-You can run `npx prisma studio` to look at your database.
+This is great for trying things out but you can use [Prisma migrate](https://www.prisma.io/docs/concepts/components/prisma-migrate) for production.
 
-Run the development server.
+You can change the database schema inside `prisma/schema.prisma` and run `npx prisma studio` to look at your database.
+
+💿️ Run the development server.
 
 ```bash
 npm run dev
