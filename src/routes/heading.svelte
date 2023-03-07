@@ -1,15 +1,26 @@
 <script lang="ts">
+	import { enhance } from '$app/forms'
+	import { getUser } from '@lucia-auth/sveltekit/client'
 	import { AppBar, LightSwitch } from '@skeletonlabs/skeleton'
+
+	const user = getUser()
 </script>
 
 <AppBar>
 	<svelte:fragment slot="lead">
-		<b>Your Enterprise</b>
+		<a href="/">Your Enterprise</a>
 	</svelte:fragment>
 
 	<svelte:fragment slot="trail">
-		<a href="/register">Register</a>
-		<a href="/login">Log in</a>
+		{#if $user}
+			<form method="POST" use:enhance>
+				<button type="submit">Sign out</button>
+			</form>
+		{:else}
+			<a href="/register">Register</a>
+			<a href="/login">Log in</a>
+		{/if}
+
 		<LightSwitch />
 	</svelte:fragment>
 </AppBar>

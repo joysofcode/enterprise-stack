@@ -1,17 +1,20 @@
-<script lang="ts">
-	import { enhance } from '$app/forms'
-	import { getUser } from '@lucia-auth/sveltekit/client'
+<div class="mt-16 grid justify-items-center text-center">
+	<h1>
+		<span
+			class=" bg-gradient-to-r from-blue-400 to-purple-400  box-decoration-clone bg-clip-text text-7xl font-bold text-transparent"
+		>
+			SvelteKit Enterprise Stack
+		</span>
+	</h1>
 
-	const user = getUser()
-</script>
+	<span class="my-16 block max-w-3xl text-2xl text-gray-400">
+		Every part of the SvelteKit stack for enterprise is optimized to go
+		blazingly fast to please investors and shareholders alike.
+	</span>
 
-<h1>Profile</h1>
-
-<div>
-	<p>User id: {$user?.userId}</p>
-	<p>Username: {$user?.username}</p>
+	<img
+		class="h-80 w-80 rounded-full object-cover"
+		src="https://haha.business/business.jpg"
+		alt="Business person laughing"
+	/>
 </div>
-
-<form method="POST" use:enhance>
-	<button type="submit">Sign out</button>
-</form>
