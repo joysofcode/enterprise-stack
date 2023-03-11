@@ -13,7 +13,7 @@
 
 	<svelte:fragment slot="trail">
 		{#if $user}
-			<form method="POST" use:enhance>
+			<form method="POST" action="/logout" use:enhance>
 				<button type="submit">Sign out</button>
 			</form>
 		{:else}
