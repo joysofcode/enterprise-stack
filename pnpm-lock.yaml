@@ -16,6 +16,7 @@ specifiers:
   eslint-config-prettier: ^8.7.0
   eslint-plugin-svelte3: ^4.0.0
   lucia-auth: ^0.9.0
+  lucide-svelte: ^0.125.0
   postcss: ^8.4.21
   postcss-load-config: ^4.0.1
   prettier: ^2.8.4
@@ -35,6 +36,7 @@ dependencies:
   '@lucia-auth/sveltekit': 0.6.10_5g7vrpq3mts2hz3zbae7ybndky
   '@prisma/client': 4.11.0
   lucia-auth: 0.9.0
+  lucide-svelte: 0.125.0_svelte@3.56.0
 
 devDependencies:
   '@playwright/test': 1.31.2
@@ -1538,6 +1540,14 @@ packages:
     dependencies:
       '@noble/hashes': 1.2.0
       nanoid: 4.0.1
+    dev: false
+
+  /lucide-svelte/0.125.0_svelte@3.56.0:
+    resolution: {integrity: sha512-IP0uFGUBUe30H/dKhmvQbRkHQaFLM5klJljjLTCUSsrIAbGjPWkqPVjYUXl8VVqnFYLR9l8qJq1Bt4QYUq+hog==}
+    peerDependencies:
+      svelte: ^3.49.0
+    dependencies:
+      svelte: 3.56.0
     dev: false
 
   /magic-string/0.27.0:

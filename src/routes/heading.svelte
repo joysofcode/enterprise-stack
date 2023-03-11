@@ -2,13 +2,16 @@
 	import { enhance } from '$app/forms'
 	import { getUser } from '@lucia-auth/sveltekit/client'
 	import { AppBar, LightSwitch } from '@skeletonlabs/skeleton'
+	import { Flame } from 'lucide-svelte'
 
 	const user = getUser()
 </script>
 
 <AppBar>
 	<svelte:fragment slot="lead">
-		<a href="/">Your Enterprise</a>
+		<a class="flex gap-1" href="/">
+			<Flame /> Enterprise
+		</a>
 	</svelte:fragment>
 
 	<svelte:fragment slot="trail">

@@ -44,6 +44,7 @@
 		"@lucia-auth/adapter-prisma": "^0.6.0",
 		"@lucia-auth/sveltekit": "^0.6.10",
 		"@prisma/client": "^4.11.0",
-		"lucia-auth": "^0.9.0"
+		"lucia-auth": "^0.9.0",
+		"lucide-svelte": "^0.125.0"
 	}
 }
