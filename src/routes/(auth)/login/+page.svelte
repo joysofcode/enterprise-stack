@@ -16,6 +16,11 @@
 			<input class="input" type="password" id="password" name="password" />
 		</label>
 
+		<p>
+			Don't have an account?
+			<a href="/register">Register</a>
+		</p>
+
 		<button class="btn variant-filled mt-4" type="submit">Log in</button>
 	</form>
 </div>
