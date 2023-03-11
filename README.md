@@ -2,8 +2,6 @@
 
 Time is money and setting up a project can be a lot when you could be working on the business logic instead.
 
-Tap into your true potential and you're going to be shouting "Ha Ha! Business" to the bank.
-
 ![SvelteKit Enterprise Stack](https://user-images.githubusercontent.com/38083522/223439340-ae4af96b-e848-47fc-be73-3a4b8cb834e1.png)
 
 ## The Stack
@@ -13,10 +11,10 @@ Every part of the SvelteKit stack for enterprise is optimized to go blazingly fa
 - [Prisma](https://www.prisma.io/) for the database
 - [Lucia](https://lucia-auth.com/) for authentication
 - [Tailwind](https://tailwindcss.com/) for styling (with automatic class sorting) and [Skeleton UI](https://www.skeleton.dev/) for the UI components
-- [svelteKit-superforms](https://github.com/ciscoheat/sveltekit-superforms) to make working with forms easy
+- [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) to make working with forms easy
 - [svelte-stripe](https://www.sveltestripe.com/) to integrate [Stripe](https://stripe.com/) payments
 - [Lucide](https://lucide.dev/) for icons
-- [TypeScript](https://www.typescriptlang.org/), [Prettier](https://prettier.io/), [ESLint](https://eslint.org/) and [Playwright](https://playwright.dev/) and [Vitest](https://vitest.dev/) for testing configured
+- [TypeScript](https://www.typescriptlang.org/), [Prettier](https://prettier.io/), [ESLint](https://eslint.org/), [Playwright](https://playwright.dev/) and [Vitest](https://vitest.dev/) for testing configured
 
 You can change anything you want from your database to authentication **if you read their documentation** — for example by default Prisma uses [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to change it to use any other SQL database if you want.
 
