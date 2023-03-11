@@ -2,10 +2,10 @@
 	import { enhance } from '$app/forms'
 </script>
 
-<div class="m-auto mt-16 max-w-sm">
+<div class="card m-auto mt-16 max-w-md p-8">
 	<h1>Log in</h1>
 
-	<form class="mt-8 space-y-4" method="POST" use:enhance>
+	<form class="mt-8 space-y-8" method="POST" use:enhance>
 		<label class="label" for="username">
 			<span>Username</span>
 			<input class="input" type="text" id="username" name="username" />
