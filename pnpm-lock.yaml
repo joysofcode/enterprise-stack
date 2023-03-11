@@ -25,11 +25,13 @@ specifiers:
   svelte: ^3.56.0
   svelte-check: ^3.1.2
   svelte-preprocess: ^5.0.1
+  sveltekit-superforms: ^0.5.23
   tailwindcss: ^3.2.7
   tslib: ^2.5.0
   typescript: ^4.9.5
   vite: ^4.1.4
   vitest: ^0.29.2
+  zod: ^3.21.4
 
 dependencies:
   '@lucia-auth/adapter-prisma': 0.6.0_lucia-auth@0.9.0
@@ -58,11 +60,13 @@ devDependencies:
   svelte: 3.56.0
   svelte-check: 3.1.2_w3wowcclux2zom2naamp3btumu
   svelte-preprocess: 5.0.1_myszeeawkmjjvrp5vs3t62owqy
+  sveltekit-superforms: 0.5.23_5xqdxdestwqplh76cff5vcz6eq
   tailwindcss: 3.2.7_postcss@8.4.21
   tslib: 2.5.0
   typescript: 4.9.5
   vite: 4.1.4
   vitest: 0.29.2
+  zod: 3.21.4
 
 packages:
 
@@ -2293,6 +2297,18 @@ packages:
     resolution: {integrity: sha512-LvXiJbjdvJKwB/0CQyYpDX0q+hFqCyWmybzC2G6eK1tJJA/RSRCytTfNmjHv+RHlLuA70vWG7nXp6gbeErYvRA==}
     engines: {node: '>= 8'}
 
+  /sveltekit-superforms/0.5.23_5xqdxdestwqplh76cff5vcz6eq:
+    resolution: {integrity: sha512-R6cGyDArQJineuh3YZs2zQb3SeGHaQspeIAuPbGGZOIQB2I5x7whYs1ItgRGAxmd7WPWtgGQUGO0znjFlG2IqA==}
+    peerDependencies:
+      '@sveltejs/kit': 1.x
+      svelte: 3.x
+      zod: 3.x
+    dependencies:
+      '@sveltejs/kit': 1.11.0_svelte@3.56.0+vite@4.1.4
+      svelte: 3.56.0
+      zod: 3.21.4
+    dev: true
+
   /tailwindcss/3.2.7_postcss@8.4.21:
     resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
@@ -2644,4 +2660,8 @@ packages:
   /yocto-queue/1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
+    dev: true
+
+  /zod/3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: true

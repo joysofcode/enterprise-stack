@@ -1,26 +1,54 @@
 <script lang="ts">
-	import { enhance } from '$app/forms'
+	import { superForm } from 'sveltekit-superforms/client'
+
+	export let data
+
+	const { form, errors, constraints, enhance } = superForm(data.form)
 </script>
 
 <div class="card m-auto mt-16 max-w-md p-8">
 	<h1>Log in</h1>
 
-	<form class="mt-8 space-y-8" method="POST" use:enhance>
+	<form method="POST" class="mt-8 space-y-8" use:enhance>
 		<label class="label" for="username">
-			<span>Username</span>
-			<input class="input" type="text" id="username" name="username" />
+			<span class="block">Username</span>
+			<input
+				class="input"
+				type="text"
+				name="username"
+				id="username"
+				class:input-error={$errors.username}
+				data-invalid={$errors.username}
+				bind:value={$form.username}
+				{...$constraints.username}
+			/>
 		</label>
+		{#if $errors.username}
+			<span class="text-red-400">{$errors.username}</span>
+		{/if}
 
 		<label class="label" for="password">
-			<span>Password</span>
-			<input class="input" type="password" id="password" name="password" />
+			<span class="block">Password</span>
+			<input
+				class="input"
+				type="password"
+				name="password"
+				id="password"
+				class:input-error={$errors.password}
+				data-invalid={$errors.password}
+				bind:value={$form.password}
+				{...$constraints.password}
+			/>
 		</label>
+		{#if $errors.password}
+			<span class="text-red-400">{$errors.password}</span>
+		{/if}
 
 		<p>
 			Don't have an account?
 			<a href="/register">Register</a>
 		</p>
 
-		<button class="btn variant-filled mt-4" type="submit">Log in</button>
+		<button class="btn variant-filled" type="submit">Log in</button>
 	</form>
 </div>
