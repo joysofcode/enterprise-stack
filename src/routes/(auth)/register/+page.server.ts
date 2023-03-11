@@ -1,15 +1,14 @@
 import { fail, redirect } from '@sveltejs/kit'
 import { auth } from '$lib/server/auth'
-import type { PageServerLoad, Actions } from './$types'
 
-// if the user exists, redirect authenticated users to the profile page.
-export const load: PageServerLoad = async ({ locals }) => {
+// if the user exists, redirect authenticated users to the profile page
+export const load = async ({ locals }) => {
 	const session = await locals.validate()
 	if (session) throw redirect(302, '/')
 	return {}
 }
 
-export const actions: Actions = {
+export const actions = {
 	default: async ({ request, locals }) => {
 		const form = await request.formData()
 		const username = form.get('username')

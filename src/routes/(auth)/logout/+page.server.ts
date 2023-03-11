@@ -1,7 +1,7 @@
-import { fail, type Actions } from '@sveltejs/kit'
+import { fail } from '@sveltejs/kit'
 import { auth } from '$lib/server/auth'
 
-export const actions: Actions = {
+export const actions = {
 	default: async ({ locals }) => {
 		const session = await locals.validate()
 		if (!session) return fail(401)
