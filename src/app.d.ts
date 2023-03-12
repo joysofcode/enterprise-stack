@@ -2,11 +2,11 @@
 // for information about these interfaces
 
 /// <reference types="lucia-auth" />
+import type { User } from '@prisma/client'
+
 declare namespace Lucia {
 	type Auth = import('$lib/server/auth').Auth
-	type UserAttributes = {
-		username: string
-	}
+	type UserAttributes = User
 }
 
 declare global {
