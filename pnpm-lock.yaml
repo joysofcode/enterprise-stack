@@ -22,6 +22,7 @@ specifiers:
   prettier: ^2.8.4
   prettier-plugin-svelte: ^2.9.0
   prettier-plugin-tailwindcss: ^0.2.4
+  prisma: ^4.11.0
   svelte: ^3.56.0
   svelte-check: ^3.1.2
   svelte-preprocess: ^5.0.1
@@ -36,7 +37,7 @@ specifiers:
 dependencies:
   '@lucia-auth/adapter-prisma': 0.6.0_lucia-auth@0.9.0
   '@lucia-auth/sveltekit': 0.6.10_5g7vrpq3mts2hz3zbae7ybndky
-  '@prisma/client': 4.11.0
+  '@prisma/client': 4.11.0_prisma@4.11.0
   lucia-auth: 0.9.0
   lucide-svelte: 0.125.0_svelte@3.56.0
 
@@ -57,6 +58,7 @@ devDependencies:
   prettier: 2.8.4
   prettier-plugin-svelte: 2.9.0_gan2xfhhcbz3kbkivttwsjndea
   prettier-plugin-tailwindcss: 0.2.4_yjdjpc7im5hvpskij45owfsns4
+  prisma: 4.11.0
   svelte: 3.56.0
   svelte-check: 3.1.2_w3wowcclux2zom2naamp3btumu
   svelte-preprocess: 5.0.1_myszeeawkmjjvrp5vs3t62owqy
@@ -400,7 +402,7 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@prisma/client/4.11.0:
+  /@prisma/client/4.11.0_prisma@4.11.0:
     resolution: {integrity: sha512-0INHYkQIqgAjrt7NzhYpeDQi8x3Nvylc2uDngKyFDDj1tTRQ4uV1HnVmd1sQEraeVAN63SOK0dgCKQHlvjL0KA==}
     engines: {node: '>=14.17'}
     requiresBuild: true
@@ -411,11 +413,16 @@ packages:
         optional: true
     dependencies:
       '@prisma/engines-version': 4.11.0-57.8fde8fef4033376662cad983758335009d522acb
+      prisma: 4.11.0
     dev: false
 
   /@prisma/engines-version/4.11.0-57.8fde8fef4033376662cad983758335009d522acb:
     resolution: {integrity: sha512-3Vd8Qq06d5xD8Ch5WauWcUUrsVPdMC6Ge8ILji8RFfyhUpqon6qSyGM0apvr1O8n8qH8cKkEFqRPsYjuz5r83g==}
     dev: false
+
+  /@prisma/engines/4.11.0:
+    resolution: {integrity: sha512-0AEBi2HXGV02cf6ASsBPhfsVIbVSDC9nbQed4iiY5eHttW9ZtMxHThuKZE1pnESbr8HRdgmFSa/Kn4OSNYuibg==}
+    requiresBuild: true
 
   /@skeletonlabs/skeleton/1.0.0:
     resolution: {integrity: sha512-xgH9NInf0md1FHr7BBSb8u8SsOOhC7fkSXhCcm1FVqaVBcVkd2/eLZhB1WFtmLB1lha1cteR+/jFN+/ZpviSBw==}
@@ -1961,6 +1968,14 @@ packages:
       ansi-styles: 5.2.0
       react-is: 17.0.2
     dev: true
+
+  /prisma/4.11.0:
+    resolution: {integrity: sha512-4zZmBXssPUEiX+GeL0MUq/Yyie4ltiKmGu7jCJFnYMamNrrulTBc+D+QwAQSJ01tyzeGHlD13kOnqPwRipnlNw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 4.11.0
 
   /punycode/2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
