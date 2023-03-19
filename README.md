@@ -6,7 +6,7 @@ Time is money and setting up a project can be time consuming when you could be w
 
 ## The Stack
 
-Every part of the SvelteKit stack for enterprise is optimized to go blazingly fast to please stakeholders and uses:
+Every part of the **SvelteKit Enterprise Stack** is optimized to go blazingly fast to please stakeholders and uses:
 
 - [Prisma](https://www.prisma.io/) for the database
 - [Lucia](https://lucia-auth.com/) for authentication
@@ -38,13 +38,15 @@ In the case you want something more custom like [Stripe elements](https://stripe
 
 If this sounds complicated let Stripe handle everything and create a payment link for any product you create and just point to the product.
 
-## Using GitHub Templates
+## Get Started
+
+### Using GitHub Templates
 
 You can start a new project by pressing "Use this template" inside GitHub which copies the project with a clean Git history.
 
 ![Template](https://user-images.githubusercontent.com/38083522/223441491-4d3dda0b-ee0e-49cd-ab0d-ce9fd74dd124.png)
 
-## Using Degit
+### Using Degit
 
 You can use `degit` to download the project if you don't want to create a new repository, or if you're not using GitHub which also gives you a clean slate to start from.
 
