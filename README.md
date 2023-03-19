@@ -1,8 +1,8 @@
 # The SvelteKit Enterprise Stack
 
-They say that time is money and setting up a project can be a lot when you could be working on the business logic instead.
+Time is money and setting up a project can be a lot when you could be working on the business logic instead.
 
-![SvelteKit Enterprise Stack](https://user-images.githubusercontent.com/38083522/223439340-ae4af96b-e848-47fc-be73-3a4b8cb834e1.png)
+![SvelteKit Enterprise Stack](https://user-images.githubusercontent.com/38083522/226189777-4ecda836-5d1f-4819-ba11-2d2fe09d1838.png)
 
 ## The Stack
 
@@ -30,11 +30,13 @@ You're going to need a Stripe account and then you can get the API keys from the
 
 You can find a basic Stripe subscription example at `/pricing` but you're going to need to [understand how to work with the Stripe API](https://stripe.com/docs) to change it to what you want and update your Prisma schema to give users access based on what they purchased.
 
+![Pricing](https://user-images.githubusercontent.com/38083522/226190016-72281b9e-8493-4bc7-bcf6-2562211ea8ad.png)
+
 Inside the Stripe dashboard you can add products and get the `productId` but also [add a webhook endpoint](https://dashboard.stripe.com/test/webhooks) that points to `stripe/webhook` where you can add your logic to respond to events like checkouts or if an invoice has been paid to give the customer access to your product.
 
-If you want even simpler payments and let Stripe handle everything you can create a payment link for any product you create and point to that.
+If this sounds complicated let Stripe handle everything and create a payment link for any product you create and just point to the product.
 
-If you want something more custom like [Stripe elements](https://stripe.com/payments/elements) you can look at the [svelte-stripe](https://www.sveltestripe.com/) package that has a simple integration with instructions and examples.
+In the case you want something more custom like [Stripe elements](https://stripe.com/payments/elements) you can look at the [svelte-stripe](https://www.sveltestripe.com/) package that has a simple integration with instructions and examples.
 
 ## Using GitHub Templates
 
