@@ -51,18 +51,20 @@ You can start a new project by pressing "Use this template" inside GitHub which 
 You can use `degit` to download the project if you don't want to create a new repository, or if you're not using GitHub which also gives you a clean slate to start from.
 
 ```
-npx degit joysofcode/enterprise-stack
+pnpx degit joysofcode/enterprise-stack
 ```
 
 ## Setup
 
-📦️ Install the project dependencies.
+You can use any package manager of your choice but I recommend you use [pnpm](https://pnpm.io/) because it's fast and doesn't destroy your hard disk because it reuses packages.
+
+### 📦️ Install the project dependencies
 
 ```bash
-npm i
+pnpm i
 ```
 
-⚙️ Rename `.env.example` to `.env` and set your environment variables inside.
+### ⚙️ Rename `.env.example` to `.env` and set your environment variables inside
 
 If you're using a host like Vercel you have to enter the environment variables in their dashboard.
 
@@ -76,7 +78,7 @@ SECRET_STRIPE_KEY="sk_test_1234"
 STRIPE_WEBHOOK_SECRET="we_1234"
 ```
 
-📜 Create the database and generate the Prisma client from your Prisma schema.
+### 📜 Create the database and generate the Prisma client from your Prisma schema
 
 ```bash
 npx prisma db push
@@ -86,22 +88,22 @@ This is great for trying things out but you can use [Prisma migrate](https://www
 
 You can change the database schema inside `prisma/schema.prisma` and run `npx prisma studio` to look at your database.
 
-💿️ Run the development server.
+### 💿️ Run the development server
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
-## Deploying
+### ⛵️ Deploying
 
 You can pick a SvelteKit adapter you want and deploy this to anywhere. If you don't have a full-stack hosting solution you can use a serverless SQL database provider and host your frontend somewhere else.
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 You can also preview the build.
 
 ```bash
-npm run preview
+pnpm run preview
 ```
