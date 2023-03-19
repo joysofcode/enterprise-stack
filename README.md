@@ -36,15 +36,15 @@ Inside the Stripe dashboard you can add products and get the `productId` but als
 
 In the case you want something more custom like [Stripe elements](https://stripe.com/payments/elements) you can look at the [svelte-stripe](https://www.sveltestripe.com/) package that has a simple integration with instructions and examples.
 
-If this sounds complicated let Stripe handle everything and create a payment link for any product you create and just point to the product.
+If this sounds complicated let Stripe handle everything and create a payment link for the product you create and just use that link.
 
 ## Get Started
 
 ### Using GitHub Templates
 
-You can start a new project by pressing "Use this template" inside GitHub which copies the project with a clean Git history.
+You can start a new project by pressing "Use this template" at the top which copies the project with a clean history.
 
-![Template](https://user-images.githubusercontent.com/38083522/223441491-4d3dda0b-ee0e-49cd-ab0d-ce9fd74dd124.png)
+![Template](https://user-images.githubusercontent.com/38083522/226207439-1195c8c4-e3e2-4db0-8f39-7277b08872be.png)
 
 ### Using Degit
 
@@ -56,7 +56,7 @@ pnpx degit joysofcode/enterprise-stack
 
 ## Setup
 
-You can use any package manager of your choice but I recommend you use [pnpm](https://pnpm.io/) because it's fast and doesn't destroy your hard disk because it reuses packages.
+You can use any package manager of your choice but I recommend you use [pnpm](https://pnpm.io/) because it's fast and doesn't destroy your hard disk because it symlinks packages.
 
 ### 📦️ Install the project dependencies
 
