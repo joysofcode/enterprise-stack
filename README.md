@@ -1,12 +1,12 @@
 # The SvelteKit Enterprise Stack
 
-Time is money and setting up a project can be a lot when you could be working on the business logic instead.
+Time is money and setting up a project can be time consuming when you could be working on the business logic instead.
 
 ![SvelteKit Enterprise Stack](https://user-images.githubusercontent.com/38083522/226189777-4ecda836-5d1f-4819-ba11-2d2fe09d1838.png)
 
 ## The Stack
 
-Every part of the SvelteKit stack for enterprise is optimized to go blazingly fast to please stakeholders:
+Every part of the SvelteKit stack for enterprise is optimized to go blazingly fast to please stakeholders and uses:
 
 - [Prisma](https://www.prisma.io/) for the database
 - [Lucia](https://lucia-auth.com/) for authentication
@@ -18,7 +18,7 @@ Every part of the SvelteKit stack for enterprise is optimized to go blazingly fa
 
 ## Customization
 
-Every piece is modular and you can replace it with something else you want to use.
+Every part of the stack is modular and easy to replace.
 
 You can change anything you want from your database to authentication **if you read their documentation** — for example by default Prisma uses [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to change it to use any other SQL database or MongoDB if you want.
 
@@ -26,17 +26,17 @@ You can change anything you want from your database to authentication **if you r
 
 The Stripe payment method is set up to give you a starting point how to do Stripe payments with SvelteKit but easy to remove if you don't need payments.
 
-You're going to need a Stripe account and then you can get the API keys from the [Stripe dashboard](https://dashboard.stripe.com/login) you can put inside your `.env` file for local development or the dashboard of the host.
+You're going to need a Stripe account and then you can get the API keys from the [Stripe dashboard](https://dashboard.stripe.com/login) you can put inside your `.env` file for local development or the dashboard of your host.
 
 You can find a basic Stripe subscription example at `/pricing` but you're going to need to [understand how to work with the Stripe API](https://stripe.com/docs) to change it to what you want and update your Prisma schema to give users access based on what they purchased.
 
-![Pricing](https://user-images.githubusercontent.com/38083522/226190016-72281b9e-8493-4bc7-bcf6-2562211ea8ad.png)
+![Pricing](https://user-images.githubusercontent.com/38083522/226190147-44cdd3b5-17ab-4ad0-972a-1f8f57dc74c1.png)
 
 Inside the Stripe dashboard you can add products and get the `productId` but also [add a webhook endpoint](https://dashboard.stripe.com/test/webhooks) that points to `stripe/webhook` where you can add your logic to respond to events like checkouts or if an invoice has been paid to give the customer access to your product.
 
-If this sounds complicated let Stripe handle everything and create a payment link for any product you create and just point to the product.
-
 In the case you want something more custom like [Stripe elements](https://stripe.com/payments/elements) you can look at the [svelte-stripe](https://www.sveltestripe.com/) package that has a simple integration with instructions and examples.
+
+If this sounds complicated let Stripe handle everything and create a payment link for any product you create and just point to the product.
 
 ## Using GitHub Templates
 
