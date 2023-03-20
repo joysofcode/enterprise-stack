@@ -8,8 +8,8 @@
 	</h1>
 
 	<span class="my-16 block max-w-3xl text-2xl text-gray-400">
-		Every part of the SvelteKit stack for enterprise is optimized to go
-		blazingly fast to please investors and shareholders alike.
+		Every part of the SvelteKit enterprise stack is optimized to go blazingly
+		fast and please stakeholders.
 	</span>
 
 	<img
