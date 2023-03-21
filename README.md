@@ -10,29 +10,31 @@ Every part of the **SvelteKit Enterprise Stack** is optimized to go blazingly fa
 
 - [Prisma](https://www.prisma.io/) for the database
 - [Lucia](https://lucia-auth.com/) for authentication
-- [Tailwind](https://tailwindcss.com/) for styling (with automatic class sorting) and [Skeleton UI](https://www.skeleton.dev/) for the UI components
+- [Tailwind](https://tailwindcss.com/) for styling with automatic class sorting and [Skeleton UI](https://www.skeleton.dev/) for the UI components
 - [Stripe](https://stripe.com/) for payments
-- [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) to make working with forms easy
-- [Lucide](https://lucide.dev/) for icons
+- [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) make working with forms easy
+- [Lucide](https://lucide.dev/) for beautiful and consistent icons
 - [TypeScript](https://www.typescriptlang.org/), [Prettier](https://prettier.io/), [ESLint](https://eslint.org/), [Playwright](https://playwright.dev/) and [Vitest](https://vitest.dev/) for testing configured
 
 ## Customization
 
 Every part of the stack is modular and easy to replace.
 
-You can change anything you want from your database to authentication **if you read their documentation** — for example by default Prisma uses [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to change it to use any other SQL database or MongoDB if you want.
+You can configure anything you want from your database to authentication **if you read their respective documentation** — for example by default I configured Prisma with [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to [change the database connector](https://www.prisma.io/docs/concepts/database-connectors) to use **PostgreSQL**, **MySQL**, **MongoDB**, **CockroachDB** or **Microsoft SQL Server** without having to change the Prisma schema unless you're using a specific feature of that type of database.
 
 ## Payments
 
-The Stripe payment method is set up to give you a starting point how to do Stripe payments with SvelteKit but easy to remove if you don't need payments.
+Stripe payment is set up to give you a starting point how to do Stripe payments with SvelteKit but easy to remove if you don't need payments.
 
-You're going to need a Stripe account and then you can get the API keys from the [Stripe dashboard](https://dashboard.stripe.com/login) you can put inside your `.env` file for local development or the dashboard of your host.
+- You're going to need to create a Stripe account
+- Get the API keys from the [Stripe dashboard](https://dashboard.stripe.com/login)
+- Place the API keys inside your `.env` file for local development or the dashboard of your host
+- Create the product inside the [Stripe dashboard](https://dashboard.stripe.com/test/dashboard/products) and get the `productId`
+- You can [add a webhook endpoint](https://dashboard.stripe.com/test/webhooks) that points to `stripe/webhook` where you can add logic to respond to events like checkouts or if an invoice has been paid to continue or revoke access to your product
 
-You can find a basic Stripe subscription example at `/pricing` but you're going to need to [understand how to work with the Stripe API](https://stripe.com/docs) to change it to what you want and update your Prisma schema to give users access based on what they purchased.
+You can find a Stripe subscription example at `/pricing` but you're going to need to [understand how to work with the Stripe API](https://stripe.com/docs) to change it to what you want and update your Prisma schema to give users access based on what they purchased.
 
 ![Pricing](https://user-images.githubusercontent.com/38083522/226190147-44cdd3b5-17ab-4ad0-972a-1f8f57dc74c1.png)
-
-Inside the Stripe dashboard you can add products and get the `productId` but also [add a webhook endpoint](https://dashboard.stripe.com/test/webhooks) that points to `stripe/webhook` where you can add your logic to respond to events like checkouts or if an invoice has been paid to give the customer access to your product.
 
 In the case you want something more custom like [Stripe elements](https://stripe.com/payments/elements) you can look at the [svelte-stripe](https://www.sveltestripe.com/) package that has a simple integration with instructions and examples.
 
@@ -64,7 +66,7 @@ You can use any package manager of your choice but I recommend you use [pnpm](ht
 pnpm i
 ```
 
-### ⚙️ Rename `.env.example` to `.env` and set your environment variables inside
+### ⚙️ Rename `.env.example` to `.env` and set your environment variables
 
 If you're using a host like Vercel you have to enter the environment variables in their dashboard.
 
@@ -81,7 +83,7 @@ STRIPE_WEBHOOK_SECRET="we_1234"
 ### 📜 Create the database and generate the Prisma client from your Prisma schema
 
 ```bash
-npx prisma db push
+pnpx prisma db push
 ```
 
 This is great for trying things out but you can use [Prisma migrate](https://www.prisma.io/docs/concepts/components/prisma-migrate) for production.
@@ -96,7 +98,7 @@ pnpm run dev
 
 ### ⛵️ Deploying
 
-You can pick a SvelteKit adapter you want and deploy this to anywhere. If you don't have a full-stack hosting solution you can use a serverless SQL database provider and host your frontend somewhere else.
+You can pick a SvelteKit adapter and deploy this to anywhere. If you don't have a full-stack hosting solution you can provision a serverless PostgreSQL database provider using [Railway](https://railway.app/) or [Supabase](https://supabase.com/) and host your frontend on [Vercel](https://vercel.com/) startng at no cost.
 
 ```bash
 pnpm run build
