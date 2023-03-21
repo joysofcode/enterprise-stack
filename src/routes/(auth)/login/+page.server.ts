@@ -32,7 +32,7 @@ export const actions = {
 			const session = await auth.createSession(key.userId)
 			locals.setSession(session)
 		} catch (error) {
-			return setError(form, 'username', 'Invalid credentials!')
+			return setError(form, 'username', 'Invalid credentials')
 		}
 	},
 }
