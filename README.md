@@ -20,9 +20,7 @@ Every part of the **SvelteKit Enterprise Stack** is optimized to go blazingly fa
 
 Every part of the stack is modular and easy to replace.
 
-You can configure anything you want from your database to authentication **if you read their respective documentation**.
-
-For example by default Prisma is configured with [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to [change the database connector](https://www.prisma.io/docs/concepts/database-connectors) to use **PostgreSQL**, **MySQL**, **MongoDB**, **CockroachDB** or **Microsoft SQL Server** without having to change the Prisma schema unless you're using a specific feature of that type of database.
+You can **configure** anything you want from your database to authentication if you read their respective **documentation** — for example Prisma is configured with [SQLite](https://www.sqlite.org/index.html) because it requires no setup but it's trivial to [change the database connector](https://www.prisma.io/docs/concepts/database-connectors) to use **PostgreSQL**, **MySQL**, **MongoDB**, **CockroachDB** or **Microsoft SQL Server** without having to change the Prisma schema.
 
 ## Payments
 
@@ -104,7 +102,7 @@ pnpm run dev
 
 You can use any SvelteKit adapter that deploys to a target that supports a [Node.js](https://nodejs.org/) runtime.
 
-If you don't have a full-stack hosting solution you can provision a serverless PostgreSQL database provider using [Railway](https://railway.app/) or [Supabase](https://supabase.com/) and host your frontend on [Vercel](https://vercel.com/) startng at no cost.
+If you don't have a full-stack hosting solution you can provision a serverless PostgreSQL database provider using [Railway](https://railway.app/) or [Supabase](https://supabase.com/) and host your frontend on [Vercel](https://vercel.com/) starting at no cost.
 
 ```bash
 pnpm run build
