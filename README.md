@@ -36,9 +36,11 @@ You can find a Stripe subscription example at `/pricing` but you're going to nee
 
 ![Pricing](https://user-images.githubusercontent.com/38083522/226190147-44cdd3b5-17ab-4ad0-972a-1f8f57dc74c1.png)
 
-In the case you want something more custom like [Stripe elements](https://stripe.com/payments/elements) you can look at the [svelte-stripe](https://www.sveltestripe.com/) package that has a simple integration with instructions and examples.
+There's so many things you can do with the Stripe API like using their client library to get a dynamic pricing table if you want but I wanted to keep things simple.
 
-If this sounds complicated let Stripe handle everything and create a payment link for the product you create and just use that link.
+You might want something more custom like [Stripe elements](https://stripe.com/payments/elements) in which case you can look at the [svelte-stripe](https://www.sveltestripe.com/) package that has a simple integration with instructions and examples.
+
+If you want something simpler let Stripe handle everything and [create a payment link](https://stripe.com/en-hr/payments/payment-links) for the product you create and just use that link.
 
 ## Get Started
 
