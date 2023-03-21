@@ -1,5 +1,5 @@
 import { fail, redirect } from '@sveltejs/kit'
-import { superValidate } from 'sveltekit-superforms/server'
+import { superValidate, setError } from 'sveltekit-superforms/server'
 
 import { auth } from '$lib/server/auth'
 import { authSchema } from '$lib/zod/schema'
@@ -37,8 +37,7 @@ export const actions = {
 			const session = await auth.createSession(user.userId)
 			locals.setSession(session)
 		} catch (error) {
-			// username already in use
-			return fail(400)
+			return setError(form, 'username', 'Username already in use')
 		}
 	},
 }
