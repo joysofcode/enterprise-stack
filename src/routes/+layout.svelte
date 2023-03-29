@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores'
 	import Heading from './heading.svelte'
 
 	import '@skeletonlabs/skeleton/themes/theme-crimson.css'
