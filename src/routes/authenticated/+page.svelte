@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { getUser } from '@lucia-auth/sveltekit/client'
+	import { page } from "$app/stores"
 
-	const user = getUser()
+	$: user = $page.data.user
 </script>
 
 <div class="p-4">
 	<h1>Profile</h1>
-	<p class="mt-4 capitalize">Welcome, {$user?.username}!</p>
+	<p class="mt-4 capitalize">Welcome, {user?.username}!</p>
 </div>
