@@ -14,15 +14,16 @@ model AuthUser {
   id           String        @id @unique
   auth_session AuthSession[]
   auth_key     AuthKey[]
+
   // here you can add custom fields for your user
   // e.g. name, email, username, roles, etc.
-  username     String        @unique
+  username String @unique
 
   @@map("auth_users")
 }
 
 model AuthSession {
-  id             String @id @unique
+  id             String   @id @unique
   user_id        String
   active_expires BigInt
   idle_expires   BigInt
@@ -33,7 +34,7 @@ model AuthSession {
 }
 
 model AuthKey {
-  id              String  @id @unique
+  id              String   @id @unique
   hashed_password String?
   user_id         String
   primary_key     Boolean

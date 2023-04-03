@@ -12,8 +12,8 @@ declare namespace Lucia {
 declare global {
 	namespace App {
 		// interface Error {}
-		interface Locals  {
-			auth: import("lucia-auth").AuthRequest
+		interface Locals {
+			auth: import('lucia-auth').AuthRequest
 		}
 		// interface PageData {}
 		// interface Platform {}
