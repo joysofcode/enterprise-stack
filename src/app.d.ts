@@ -12,10 +12,8 @@ declare namespace Lucia {
 declare global {
 	namespace App {
 		// interface Error {}
-		interface Locals {
-			validate: import('@lucia-auth/sveltekit').Validate
-			validateUser: import('@lucia-auth/sveltekit').ValidateUser
-			setSession: import('@lucia-auth/sveltekit').SetSession
+		interface Locals  {
+			auth: import("lucia-auth").AuthRequest
 		}
 		// interface PageData {}
 		// interface Platform {}
