@@ -44,9 +44,9 @@
 		"zod": "^3.21.4"
 	},
 	"dependencies": {
-		"@lucia-auth/adapter-prisma": "^0.7.0",
+		"@lucia-auth/adapter-prisma": "^1.0.0",
 		"@prisma/client": "^4.12.0",
-		"lucia-auth": "^0.11.0",
+		"lucia-auth": "^1.0.0",
 		"lucide-svelte": "^0.130.0",
 		"stripe": "^11.17.0"
 	}
