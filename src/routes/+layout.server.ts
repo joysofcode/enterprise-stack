@@ -1,4 +1,4 @@
-/** @type {import('./$types').PageServerLoad} */
 export async function load({ locals }) {
-	return locals.auth.validateUser()
+	const { user } = await locals.auth.validateUser()
+	return { user }
 }

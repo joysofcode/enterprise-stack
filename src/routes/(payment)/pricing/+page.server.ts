@@ -2,7 +2,7 @@ import { fail, redirect } from '@sveltejs/kit'
 import { stripe } from '$lib/server/stripe'
 
 export const actions = {
-	checkout: async ({ request, url }) => {
+	async checkout({ request, url }) {
 		// you could use `superValidate` instead but it's one field or
 		// get `priceId` over the URL with `?/checkout?priceId=price_1234`
 		const data = await request.formData()

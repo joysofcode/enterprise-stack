@@ -2,7 +2,7 @@ import { fail } from '@sveltejs/kit'
 import { auth } from '$lib/server/auth'
 
 export const actions = {
-	default: async ({ locals }) => {
+	async default({ locals }) {
 		const session = await locals.auth.validate()
 		if (!session) return fail(401)
 

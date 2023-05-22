@@ -5,7 +5,7 @@ import { auth } from '$lib/server/auth'
 import { authSchema } from '$lib/zod/schema'
 
 // if the user exists, redirect authenticated users to the profile page
-export const load = async ({ locals }) => {
+export async function load({ locals }) {
 	const session = await locals.auth.validate()
 	if (session) throw redirect(302, '/')
 
@@ -15,7 +15,7 @@ export const load = async ({ locals }) => {
 }
 
 export const actions = {
-	default: async ({ request, locals }) => {
+	async default({ request, locals }) {
 		const data = await request.formData()
 		const form = await superValidate(data, authSchema)
 

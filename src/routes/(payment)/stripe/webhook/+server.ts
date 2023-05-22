@@ -2,7 +2,7 @@ import { error, json } from '@sveltejs/kit'
 import { STRIPE_WEBHOOK_SECRET } from '$env/static/private'
 import { stripe } from '$lib/server/stripe'
 
-export const POST = async ({ request }) => {
+export async function POST({ request }) {
 	let eventType: string | null = null
 
 	if (STRIPE_WEBHOOK_SECRET) {
