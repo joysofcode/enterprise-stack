@@ -18,7 +18,7 @@
 				name="username"
 				id="username"
 				class:input-error={$errors.username}
-				data-invalid={$errors.username}
+				aria-invalid={$errors.username ? 'true' : undefined}
 				bind:value={$form.username}
 				{...$constraints.username}
 			/>
@@ -35,7 +35,7 @@
 				name="password"
 				id="password"
 				class:input-error={$errors.password}
-				data-invalid={$errors.password}
+				aria-invalid={$errors.password ? 'true' : undefined}
 				bind:value={$form.password}
 				{...$constraints.password}
 			/>

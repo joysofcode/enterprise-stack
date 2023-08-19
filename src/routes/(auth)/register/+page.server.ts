@@ -10,14 +10,13 @@ export async function load({ locals }) {
 	if (session) throw redirect(302, '/')
 
 	// always return `form` in load and form actions
-	const form = await superValidate(null, authSchema)
+	const form = await superValidate(authSchema)
 	return { form }
 }
 
 export const actions = {
 	async default({ request, locals }) {
-		const data = await request.formData()
-		const form = await superValidate(data, authSchema)
+		const form = await superValidate(request, authSchema)
 
 		if (!form.valid) {
 			return fail(400, { form })

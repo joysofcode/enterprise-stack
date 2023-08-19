@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@lucia-auth/adapter-prisma':
     specifier: ^2.0.0
@@ -79,8 +83,8 @@ devDependencies:
     specifier: ^5.0.3
     version: 5.0.3(postcss-load-config@4.0.1)(postcss@8.4.23)(svelte@3.59.1)(typescript@5.0.4)
   sveltekit-superforms:
-    specifier: ^0.8.6
-    version: 0.8.6(@sveltejs/kit@1.18.0)(svelte@3.59.1)(zod@3.21.4)
+    specifier: ^1.6.0
+    version: 1.6.0(@sveltejs/kit@1.18.0)(svelte@3.59.1)(zod@3.21.4)
   tailwindcss:
     specifier: ^3.3.2
     version: 3.3.2
@@ -2336,11 +2340,11 @@ packages:
     resolution: {integrity: sha512-pKj8fEBmqf6mq3/NfrB9SLtcJcUvjYSWyePlfCqN9gujLB25RitWK8PvFzlwim6hD/We35KbPlRteuA6rnPGcQ==}
     engines: {node: '>= 8'}
 
-  /sveltekit-superforms@0.8.6(@sveltejs/kit@1.18.0)(svelte@3.59.1)(zod@3.21.4):
-    resolution: {integrity: sha512-pX4nwr+xGcT/NC0IHiIQ1TFgCEWAKrX5ODq3SMVYaUayz+QikPnEOOOvhsR2+NwI1z+Khz5lVHpcx6ZG/tkuQQ==}
+  /sveltekit-superforms@1.6.0(@sveltejs/kit@1.18.0)(svelte@3.59.1)(zod@3.21.4):
+    resolution: {integrity: sha512-Ob3vbgPuVMFuebD8R7qWHDyMVmHvbU6HYqa/ozuV9HbETkkkX7XhyDz/yMxW4q8T2kRiO50CASskiB3l6yKiqA==}
     peerDependencies:
       '@sveltejs/kit': 1.x
-      svelte: 3.x
+      svelte: 3.x || 4.x
       zod: 3.x
     dependencies:
       '@sveltejs/kit': 1.18.0(svelte@3.59.1)(vite@4.3.8)
